@@ -1,0 +1,230 @@
+<!-- <form [formGroup]="patientInfoForm" (ngSubmit)="onSubmit()" class="form-group">
+<h2>Patient Information</h2>
+<p> <i>Please fill out this form to the best of your ability and submit it to 
+    save time on the day of your appointment. If you have any questions please 
+    reach out to the office directly so that your questions can be answered.</i></p>
+<div class="form-row">
+  <div class="col">
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName" class="form-control">
+  </div>
+  <div></div>
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName" class="form-control">
+  </div>
+    <label for="dob">Date of Birth: </label>
+    <input id="dob" type="text" formControlName="dob" class="form-control">
+
+    <label for="phone-number">Phone Number: </label>
+    <input id="phone-number" type="text" formControlName="phoneNumber" class="form-control">
+
+    <label for="marital-status">Marital Status: </label>
+    <select id="marital-status" type="text" formControlName="maritalStatus" class="form-control">
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="seperated">Seperated</option>
+              </select>
+    <div formGroupName="address">
+        <h4>Address</h4>
+      
+        <label for="street">Street: </label>
+        <input id="street" type="text" formControlName="street" class="form-control">
+      
+        <label for="city">City: </label>
+        <input id="city" type="text" formControlName="city" class="form-control">
+      
+        <label for="state">State: </label>
+        <input id="state" type="text" formControlName="state" class="form-control">
+      
+        <label for="zip">Zip Code: </label>
+        <input id="zip" type="text" formControlName="zip" class="form-control">
+      </div>
+      <div formGroupName="emergencyContact">
+        <h4>Emergency Contact</h4>
+      
+        <p><i>Please fill out your emergency contact's information below.</i></p>
+        
+        <label for="firstName">First Name: </label>
+        <input id="firstName" type="text" formControlName="firstName" class="form-control">
+      
+        <label for="last-name">Last Name: </label>
+        <input id="last-name" type="text" formControlName="lastName" class="form-control">
+      
+        <label for="phone-number">Phone Number: </label>
+        <input id="phone-number" type="text" formControlName="phoneNumber" class="form-control">
+      
+        <label for="relationship">Relationship to Patient: </label>
+        <select id="relationship" type="text" formControlName="relationship" class="form-control">
+                <option value="self">Parent</option>
+                <option value="spouse">Spouse</option>
+                <option value="child">Child</option>
+                <option value="other">Other</option>
+              </select>
+        
+      </div>
+      <div formGroupName="insurance">
+        <h4>Insurance</h4>
+      
+        <p><i>Please fill out your insurance information.You will need to bring 
+            the physical card to the office the day of your appointment of provide
+            a copy of the card for your in office file. 
+        </i></p>
+        <label for="primary-insurance">Primary Insurance: </label>
+        <input id="primary-insurance" type="text" formControlName="primaryInsurance" class="form-control">
+      
+        <label for="group-number">Group Number: </label>
+        <input id="group-number" type="text" formControlName="groupNumber" class="form-control">
+      
+        <label for="id-number">ID Number: </label>
+        <input id="id-number" type="text" formControlName="idNumber" class="form-control">
+      
+        <label for="social-security">Social Security #: </label>
+        <input id="social-security" type="text" formControlName="socialSecurityNumber" class="form-control">
+        <label for="relationship">Relationship to Patient: </label>
+        <select id="relationship" type="text" formControlName="relationship" class="form-control">
+                <option value="self">Self</option>
+                <option value="spouse">Spouse</option>
+                <option value="parent">Parent</option>
+              </select>
+        
+      </div>
+    <p>Complete the form to enable button.</p>
+    <button type="submit" [disabled]="!patientInfoForm.valid">Submit</button>
+</form> -->
+
+<div class="col-lg-6 offset-lg-3 ">
+<form [formGroup]="patientInfoForm" (ngSubmit)="onSubmit()">
+  <h2>Patient Information</h2>
+
+<p> <i>Please fill out this form to the best of your ability and submit it to 
+    save time on the day of your appointment. If you have any questions please 
+    reach out to the office directly so that your questions can be answered.</i></p>
+<br>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName" class="form-control" >
+    </div>
+    <div class="col-md-6">
+      <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName" class="form-control">
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-md-6">
+    <label for="dob">Date of Birth: </label>
+    <input id="dob" type="text" formControlName="dob" class="form-control">
+  </div>
+  <div class="col-md-6">
+    <label for="phone-number">Phone Number: </label>
+    <input id="phone-number" type="text" formControlName="phoneNumber" class="form-control">
+  </div>
+</div>
+    <div class="form-group col-md-2">
+      <label for="inputState">Marital Status </label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option> Single</option>
+        <option> Married</option>
+        <option> Divorced</option>
+      </select>
+    </div>
+    <br>
+    <div formGroupName="address" class="form-group">
+      <h4>Address</h4>
+    </div>
+    <div class="form-group col-md-12">
+      <label for="street">Street: </label>
+        <input id="street" type="text" formControlName="street" class="form-control">
+    </div>
+    <div class="row">
+    <div class="col-md-4">
+      <label for="city">City: </label>
+        <input id="city" type="text" formControlName="city" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label for="state">State: </label>
+        <input id="state" type="text" formControlName="state" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label for="zip">Zip Code: </label>
+      <input id="zip" type="text" formControlName="zip" class="form-control">
+    </div>
+  </div>
+  <br>
+    <div formGroupName="emergencyContact" class="form-group">
+      <h4>Emergency Contact</h4>
+      <p><i>Please fill out your emergency contact's information below.</i></p>
+    </div>
+    <div>
+    <div class="row">
+      <div class="col-md-6">
+      <label for="firstName">First Name: </label>
+        <input id="firstName" type="text" formControlName="firstName" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label for="last-name">Last Name: </label>
+      <input id="last-name" type="text" formControlName="lastName"class="form-control">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <label for="phone-number">Phone Number: </label>
+        <input id="phone-number" type="text" formControlName="phoneNumber" class="form-control">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="relationship">Relationship to Patient: </label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option> Parent</option>
+        <option> Spouse</option>
+        <option> Child</option>
+        <option> Other</option>
+      </select>
+    </div>
+    <div formGroupName="insurance" class="form-group">
+      <h4>Insurance</h4>
+      
+        <p><i>Please fill out your insurance information. You will need to bring 
+            the physical card to the office the day of your appointment of provide
+            a copy of the card for your in office file.
+        </i></p>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="primary-insurance">Primary Insurance: </label>
+        <input id="primary-insurance" type="text" formControlName="primaryInsurance" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <label for="group-number">Group Number: </label>
+            <input id="group-number" type="text" formControlName="groupNumber" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <label for="id-number">ID Number: </label>
+            <input id="id-number" type="text" formControlName="idNumber" class="form-control">
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label for="social-security">Social Security #: </label>
+              <input id="social-security" type="text" formControlName="socialSecurityNumber" class="form-control">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="relationship">Relationship to Patient: </label>
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option> Self</option>
+              <option> Parent</option>
+              <option> Spouse</option>
+              <option> Child</option>
+            </select>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
