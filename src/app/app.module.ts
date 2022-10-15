@@ -9,6 +9,7 @@ import { PatientInfoComponent } from './patient-info/patient-info.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { DoctorInfoComponent } from './doctor-info/doctor-info.component';
 import { SicknessDiseaseInfoComponent } from './sickness-disease-info/sickness-disease-info.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SicknessDiseaseInfoComponent } from './sickness-disease-info/sickness-d
     PatientInfoComponent,
     AppointmentComponent,
     DoctorInfoComponent,
-    SicknessDiseaseInfoComponent
+    SicknessDiseaseInfoComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
