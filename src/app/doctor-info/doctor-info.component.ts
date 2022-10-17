@@ -11,7 +11,7 @@ export class DoctorInfoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
   }
 
   doctorInfoForm= new FormGroup({
@@ -22,8 +22,8 @@ export class DoctorInfoComponent implements OnInit {
    doctor: new FormControl(''),
         
        
-        
        
+
   });
 
   onSubmit() {
